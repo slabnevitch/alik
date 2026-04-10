@@ -1,0 +1,46 @@
+{% extends "templates/layouts/base.twig" %}
+
+{% set title = "Список ссылок на страницы" %}
+{% set showEMenu = false %}
+{% set isAuthorized = false %}
+
+{% block content %}
+	<div class="container mb-5">
+		<div class="row">
+			<div class="col-12">
+				<div class="h4 my-4 opacity-50">Всего страниц: {{ listHtml()|length }}</div>
+			</div>
+			<div class="col-12">
+				<div class="list-group">
+				{% for html in listHtml() %}
+					<a class="list-group-item list-group-item-action d-lg-flex justify-content-between align-items-center js-link-group" href="/{{ html.file }}" target="_blank"><div>{{ html.title }}</div><code class="d-inline-block badge text-secondary bg-light">{{ html.file }}</code></a>
+				{% endfor %}
+				</div>
+			</div>
+			<div class="col-12 mt-5 text-center">
+				<div><button id="download-list" class="btn btn-outline-success">Скачать список страниц</button></div>
+			</div>
+		</div>
+	</div>
+	<script>
+		// Скачивание файла
+		const download = (text, filename, type = "text/plain") => {
+			const url = URL.createObjectURL(new Blob([text], { type }));
+			Object.assign(document.createElement("a"), { href: url, download: filename }).click();
+		};
+
+		// Генерация контента ссылок
+		const listHtml = {{ listHtml()|json_encode() }};
+		const contentLinks = listHtml.map(({ title, file }) => `${title} - /${file}`).join('\n');
+
+		// Обработка кликов на ссылки и добавление класса active
+		document.querySelectorAll('.js-link-group').forEach(link =>
+			link.addEventListener('click', () => link.classList.add('active'))
+		);
+
+		// Скачивание списка страниц
+		document.getElementById('download-list').addEventListener('click', () =>
+			download(contentLinks, 'Список страниц сайта.txt')
+		);
+	</script>
+{% endblock %}

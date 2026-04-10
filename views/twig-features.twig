@@ -1,0 +1,79 @@
+{% extends "templates/layouts/base.twig" %}
+
+{% set title = "PEPELAC-Twig-features" %}
+
+{% set pageName = "blog" %}
+
+{% block content %}
+	<section class="bg-light py-4 min-vh-100">
+		<h2>background-image</h2>
+		<div class="bgi" style="background-image: url(/src/assets/img/profile-big.2734110e.jpg); width: 375px; aspect-ratio: 1/1; background-repeat: no-repeat;"></div>
+		<img src="/src/assets/img/profile-big.2734110e.jpg" alt="pizda">
+		<pre style="font-size: 30px;">background-image: url(/src/assets/img/profile-big.2734110e.jpg)</pre>
+		<h2>Пути для картинок</h2>
+		<pre style="font-size: 30px;">src="/src/assets/img/map-mob.svg"</pre>
+		<img src="/src/assets/img/map-mob.svg" alt="image">
+		<h2>Объявление переменных</h2>
+		{% set foo = 'foo' %}
+		{% set bar = [1, 2] %}
+		{% set fooBar = {'foo': 'bar'} %}
+		<p>{{foo}}</p>
+		<p>{{bar[0]}}</p>
+		<p>{{fooBar.foo}}</p>
+
+		<h2>Циклы</h2>
+		<h3>Перебор массива</h3>
+		{% set navigation = [{name:'main', href:'main.html'}, {name:'blog', href:'blog.html'}, {name:'about', href:'about.html'}] %}
+		<ul>
+			{% for item in navigation %}
+	            <li><a href="{{ item.href }}">{{ item.name}}</a></li>
+	        {% endfor %}
+			
+		</ul>
+
+		<hr>
+
+		<h3>По индексу</h3>
+		<ol>
+			{% for i in 0..10 %}
+			   <li>{{ i }}</li>
+			{% endfor %}
+			
+		</ol>
+		<hr>
+		{% set length = 5 %}
+		<ol>
+			{% for i in 0..length %}
+			   <li><b>{{ i }}</b></li>
+			{% endfor %}
+			
+		</ol>
+
+		<hr>
+
+		<h3>Конкатенация в значениях аттрибутов</h3>
+		{% for i in 0..length %}
+	   		<img src="img/{{ i }}.jpg" alt="image№{{ i }}">
+		{% endfor %}
+
+		<hr>
+
+		<h3>Получение индекса элемента в массиве</h3>
+		{% set models = [{name:'Classic', text:"Meet the Classic and you've found one agile ride with an incredibly swift side. Gain serious power on an electric bike that's built around you."}, {name:'Cruiser', text:"Meet the Cruiser for an elevated take on the classic Cowboy. A higher vantage gives you a comfortable advantage with an electric bike that's built around you."}] %}
+
+		{% for key, value in models %}
+			<article>
+				<h2>{{key + 1}}. {{ value.name }}</h2>
+			</article>
+		{% endfor %}
+
+		<hr>
+
+		<h3>Использование данныех из json</h3>
+		<ol>
+			{% for dog in site.dogs %} {# site - объект с данными из src/data/site.js#}
+				<li>{{dog}}</li>
+			{% endfor %}
+		</ol>
+	</section>
+{% endblock %}
