@@ -1,6 +1,43 @@
 /*--------------------header----------------------*/
 .header {
+	position: fixed;
+	left: 0;
+	right: 0;
+	top: 48px;
 
+	&__body{
+		max-width: 594px;
+		padding: 12px;
+		margin: 0 auto;
+		display: flex;
+		align-items: center;
+	}
+}
+.header__logo {
+	flex: 0 0 51px;
+	padding-left: 12px;
+	margin-right: 32px;
+
+	img{
+		display: block;
+		width: 100%;
+	}
+}
+.header__menu {
+	flex: 1 1 auto;
+}
+.menu {}
+.menu__list {
+	display: flex;
+	align-items: center;
+	column-gap: 20px;
+	list-style-type: none;
+}
+.menu__item {}
+.menu__link {}
+
+.header__talk {
+	flex: 0 0 auto;
 }
 
 /*--------------------END header----------------------*/ 

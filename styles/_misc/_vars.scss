@@ -8,7 +8,8 @@ $maxContainerWidth: $maxWidthContainer + $containerPaddings;// итоговая 
 $bg: #0E0E0E;
 $bgGray: #181716;
 $border: #34302B;
-$text: #DAC5A7;
+$textDefault: #DAC5A7;
+$textMuted: #8C7F6D;
 $textInv: #313131;
 
 // paths
@@ -43,6 +44,6 @@ $baseFontSize: 16px;
 $chillL: 'Chillax-Light', sans-serif;
 $chillReg: 'Chillax-Regular', sans-serif;
 $satL: 'Satoshi-Regular', sans-serif;
-$satlReg: 'Satoshi-Regular', sans-serif;
+$satReg: 'Satoshi-Regular', sans-serif;
 
 

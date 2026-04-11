@@ -20,7 +20,7 @@ body{
 	font-weight: 400;
 	-webkit-font-smoothing: antialiased;
 	overflow-x: hidden;
-	color: $text;
+	color: $textMuted;
 	background-color: $bg;//опционально
 
 	.lock & {
