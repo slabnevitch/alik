@@ -1,4 +1,4 @@
-// import 'virtual:svg-to-font.css'
+import 'virtual:svg-to-font.css'
 // import svgSprite from 'virtual:svg-sprite';
 import '@/styles/index.scss';
 // import * as bootstrap from 'bootstrap';
