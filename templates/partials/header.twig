@@ -1,13 +1,25 @@
 <header class="header">
-	<div class="header__wrapper">
-		<nav class="header__menu">
-			<ul class="header__list">
-				
-				{# {% for item in navigation %} #}
-		            {# <li class="header__menu-item"><a class="header__menu-link" href="#{{ item }}">{{ item}}</a></li> #}
-		        {# {% endfor %} #}
-			
+	<div class="header__body">
+		{% if pageName == "index" %}
+		    <div class="header__logo">
+		    	<img src="/src/assets/img/logo.svg" alt="logo">
+		    </div>
+		{% else %}
+		    <a href="#" class="header__logo">
+		    	<img src="/src/assets/img/logo.svg" alt="logo">
+		    </a>
+		{% endif %}logo
+
+		<nav class="header__menu menu">
+			<ul class="menu__list">
+				{% for item in site.mainMenu %} {# site - объект с данными из src/data/site.js#}
+					<li class="menu__item">
+						<a href="{{ item.url }}" class="menu__link">{{ item.name}}</a>
+					</li>
+				{% endfor %}
 			</ul>
 		</nav>
+		
+		<a href="#" class="btn btn--inv header__talk">Let’s talk</a>
 	</div>
 </header>
