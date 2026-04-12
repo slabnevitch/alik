@@ -232,25 +232,25 @@ $columnClass: '', $wrap: 1) {
 	}
 }
 @mixin menu-mob($media: $md, $burgerColor: #000, $burgerOpenColor: #000, $plateBgColor: #fff, $plateHeight: 80){//вызывается для для главного блока меню
-	.menu-header__body{
-		&:before{//верхняя плашка с заливкой (её может и не быть)
-			content: '';
-			height: #{$plateHeight + 'px'};
-			width: 100%;
-			position: fixed;
-			right: -100%;
-			top: 0;
-			background-color: $plateBgColor;
-			transition: right .4s ease;
-			z-index: 2;
+	.menu__list{
+		// &:before{//верхняя плашка с заливкой (её может и не быть)
+		// 	content: '';
+		// 	height: #{$plateHeight + 'px'};
+		// 	width: 100%;
+		// 	position: fixed;
+		// 	right: -100%;
+		// 	top: 0;
+		// 	background-color: $plateBgColor;
+		// 	transition: right .4s ease;
+		// 	z-index: 2;
 
-			.menu-opened & {
-				right: 0;
-			}
-			@include min-screen($media){
-				display: none;
-			}
-		}
+		// 	.menu-opened & {
+		// 		right: 0;
+		// 	}
+		// 	@include min-screen($media){
+		// 		display: none;
+		// 	}
+		// }
 		.menu-opened & {
 			right: 0;
 		}
@@ -258,8 +258,8 @@ $columnClass: '', $wrap: 1) {
 			position: fixed;
 			top: 0;
 			right: -100%;
-			width: 100%;
-			height: 100%;
+			width: 100vw;
+			height: 100svh;
 			transition: all .4s ease;
 			overflow-y: auto;
 		}

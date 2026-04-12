@@ -4,18 +4,31 @@
 	left: 0;
 	right: 0;
 	top: 48px;
+	z-index: 50;
+
+	@include max-screen($sm){
+		top: 15px;
+	}
 
 	&__body{
-		max-width: 594px;
 		padding: 12px;
-		margin: 0 auto;
 		display: flex;
 		align-items: center;
+		border-radius: 2px;
+		border: 2px solid $border;
+		background-color: $bgMuted;
+		backdrop-filter: blur(15px);
+
+		@include min-screen($sm){
+			max-width: 594px;
+			
+			margin: 0 auto;
+		}
 	}
 }
 .header__logo {
 	flex: 0 0 51px;
-	padding-left: 12px;
+	margin-left: 12px;
 	margin-right: 32px;
 
 	img{
@@ -25,19 +38,42 @@
 }
 .header__menu {
 	flex: 1 1 auto;
+
+	@include menu-mob($media: $sm, $burgerColor: #fff, $burgerOpenColor: #fff, $plateBgColor: #fff, $plateHeight: 80);
 }
 .menu {}
 .menu__list {
 	display: flex;
-	align-items: center;
+	flex-wrap: wrap;
 	column-gap: 20px;
 	list-style-type: none;
+
+	@include min-screen($sm){
+		align-items: center;
+		
+	}
 }
 .menu__item {}
-.menu__link {}
+.menu__link {
+	position: relative;
+	font-family: $satReg;
+	font-size: 13px;
+	line-height: 160%;
+	text-transform: uppercase;
+	color: $textDefault;
+	letter-spacing: 0.092em;
+
+	.menu-arrow{
+		position: relative;
+		top: -1px;
+		margin-left: 2px;
+		font-size: 5px;
+		vertical-align: center;
+	}
+}
 
 .header__talk {
-	flex: 0 0 auto;
+	flex: 0 0 111px;
 }
 
 /*--------------------END header----------------------*/ 
