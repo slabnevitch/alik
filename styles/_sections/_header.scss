@@ -5,6 +5,7 @@
 	right: 0;
 	top: 48px;
 	z-index: 50;
+	pointer-events: none;
 
 	@include max-screen($sm){
 		top: 15px;
@@ -15,6 +16,7 @@
 		padding: 12px;
 		display: flex;
 		align-items: center;
+		pointer-events: auto;
 
 		& > *:not(.header__menu) {
 			position: relative;

@@ -186,6 +186,7 @@
   justify-items: center;
   color: $textDefault;
   text-align: center;
+  text-wrap: balance;
 }
 .blockhead__label {
   font-family: $satReg;
@@ -194,8 +195,10 @@
   letter-spacing: 0.12em;
 }
 .blockhead__title {
-  font-family: $satReg;
-  font-size: 128px;
+  max-width: 1015px;
+  font-family: $satL;
+  // font-size: 160px;
+  @include adaptive-value('font-size', 160, 45, 1);
   line-height: 100%;
 
   span{
@@ -203,7 +206,9 @@
   }
 }
 .blockhead__text {
-  font-size: 24px;
+  max-width: 500px;
+  // font-size: 24px;
+  @include adaptive-value('font-size', 24, 16, 1);
   line-height: 150%;
   font-family: $satL;
   color: $textMuted;

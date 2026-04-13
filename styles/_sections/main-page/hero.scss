@@ -1,0 +1,34 @@
+/*--------------------hero----------------------*/
+.hero {}
+.hero__wrapper {
+	min-height: 100svh;
+	display: grid;
+	// grid-template-rows: 1fr auto;
+	align-content: center;
+	text-align: center;
+}
+.hero__picture {
+	// background-color: orange;
+	display: flex;
+	justify-content: center;
+}
+.hero__image {
+	margin-inline: auto;
+	display: block;
+	max-width: none;
+	width: 100vw;
+	height: 55svh;
+	// aspect-ratio: 719/814;
+	object-fit: contain;
+	mix-blend-mode: lighten;
+
+	@include max-screen($sm){
+		object-fit: cover;
+	}
+}
+.hero__blockhead{
+	.blockhead{
+		translate: 0 -12%;
+	}
+}
+/*--------------------END hero----------------------*/ 
