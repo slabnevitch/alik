@@ -5,6 +5,12 @@
 {% set pageName = "ui-kit" %}
 
 {% block content %}
+	{% from "templates/macros/macros.twig" import alert %}
+	{{ alert('success', 'Данные сохранены!') }}
+	{{ alert('success', false) }}
+
+	<hr>
+
 	<i class="icon-font arik"></i>
 	<i class="icon-font soc-tw"></i>
 	<i class="icon-font menu-arrow"></i>

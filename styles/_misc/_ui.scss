@@ -179,4 +179,33 @@
     transform: rotate(-45deg) translate(6px, -7px);
   } 
 } 
+
+.blockhead {
+  display: grid;
+  gap: 16px;
+  justify-items: center;
+  color: $textDefault;
+  text-align: center;
+}
+.blockhead__label {
+  font-family: $satReg;
+  font-size: 13px;
+  line-height: 160%;
+  letter-spacing: 0.12em;
+}
+.blockhead__title {
+  font-family: $satReg;
+  font-size: 128px;
+  line-height: 100%;
+
+  span{
+    font-family: $gamb;
+  }
+}
+.blockhead__text {
+  font-size: 24px;
+  line-height: 150%;
+  font-family: $satL;
+  color: $textMuted;
+}
 /*--------------------END ui----------------------*/ 

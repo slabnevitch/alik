@@ -10,20 +10,18 @@
     <div class="blockhead">
         {% if label %}
             <span class="blockhead__label">{{label}}</span>
-        {% else %}
+        {% endif %}
         <h2 class="blockhead__title">{{title}}
-            {% if label %}
+            {% if span %}
                 <span>{{span}}</span>
-            {% else %}
+            {% endif %}
         </h2>
         {% if text %}
            <div class="blockhead__text">
                <p>{{text}}</p>
            </div>
-        {% else %}
+        {% endif %}
         
     </div>
-        <div class="alert alert-{{ type }}">No message provided!</div>
-    {% endif %}
 {% endmacro %}
     
