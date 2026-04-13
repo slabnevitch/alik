@@ -1,0 +1,29 @@
+{% macro alert(type, message) %}
+    {% if message %}
+        <div class="alert alert-{{ type }}">{{ message }}</div>
+    {% else %}
+        <div class="alert alert-{{ type }}">No message provided!</div>
+    {% endif %}
+{% endmacro %}
+    
+{% macro blockhead(lablel, title, span, text) %}
+    <div class="blockhead">
+        {% if label %}
+            <span class="blockhead__label">{{label}}</span>
+        {% else %}
+        <h2 class="blockhead__title">{{title}}
+            {% if label %}
+                <span>{{span}}</span>
+            {% else %}
+        </h2>
+        {% if text %}
+           <div class="blockhead__text">
+               <p>{{text}}</p>
+           </div>
+        {% else %}
+        
+    </div>
+        <div class="alert alert-{{ type }}">No message provided!</div>
+    {% endif %}
+{% endmacro %}
+    
