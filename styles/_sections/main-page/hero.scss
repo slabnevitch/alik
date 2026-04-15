@@ -1,6 +1,7 @@
 /*--------------------hero----------------------*/
 .hero {}
-.hero__wrapper {
+.hero__container {
+	padding-inline: math.div($containerPaddings,2) + px;
 	min-height: 100svh;
 	display: grid;
 	// grid-template-rows: 1fr auto;
@@ -11,24 +12,26 @@
 	// background-color: orange;
 	display: flex;
 	justify-content: center;
+	overflow: hidden;
 }
 .hero__image {
 	margin-inline: auto;
 	display: block;
 	max-width: none;
 	width: 100vw;
-	height: 55svh;
+	height: 50dvh;
+	translate: 0 5% ;
 	// aspect-ratio: 719/814;
 	object-fit: contain;
 	mix-blend-mode: lighten;
 
-	@include max-screen($sm){
-		object-fit: cover;
-	}
+	// @include max-screen($sm){
+	// 	object-fit: cover;
+	// }
 }
 .hero__blockhead{
 	.blockhead{
-		translate: 0 -12%;
+		translate: 0 -5%;
 	}
 }
 /*--------------------END hero----------------------*/ 
