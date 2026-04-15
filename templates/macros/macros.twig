@@ -24,4 +24,12 @@
         
     </div>
 {% endmacro %}
+
+{% macro skill(title, text, btn) %}
+    <article class="skills__item item-skills">
+        <h2 class="item-skills__title">{{title}}</h2>
+        <p class="item-skills__text">{{text}}</p>
+        <a href="#" class="btn btn--arrow-round">{{btn}}</a>
+    </article>
+{% endmacro %}
     

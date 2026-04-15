@@ -1,6 +1,8 @@
 /*--------------------hero----------------------*/
-.hero {}
+.hero {
+}
 .hero__container {
+	@include adaptive-value('padding-bottom', 51, 15, 1);
 	padding-inline: math.div($containerPaddings,2) + px;
 	min-height: 100svh;
 	display: grid;

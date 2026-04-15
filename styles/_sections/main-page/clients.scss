@@ -1,0 +1,13 @@
+/*--------------------clients----------------------*/
+.clients {
+	@include adaptive-value('padding-top', 128, 15, 1);
+}
+.clients__wrapper {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+	align-items: center;
+	gap: 30px;
+}
+.clients__logo {}
+/*--------------------END clients----------------------*/ 

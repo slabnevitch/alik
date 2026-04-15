@@ -1,0 +1,8 @@
+{% from "../../../macros/macros.twig" import skill %}
+<section class="skills">
+	<div class="skills__wrapper">
+		{% for item in site.skills %} {# site - объект с данными из src/data/site.js#}
+			{{ skill(item.title, item.text, item.btn) }}	
+		{% endfor %}
+	</div>
+</section>

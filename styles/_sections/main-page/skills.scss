@@ -1,0 +1,51 @@
+/*--------------------skills----------------------*/
+.skills {
+	@include adaptive-value('padding-top', 80, 15, 1);
+}
+.skills__wrapper {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 32px;
+	counter-reset: item;
+}
+.skills__item {
+	flex: 1 1 325px;
+	@include adaptive-value('padding', 48, 16, 1);
+	border: 1px solid $border;
+	border-radius: 2px;
+	background-color: $bgMuted;
+
+	&:before{
+		margin-bottom: 4px;
+		counter-increment: item;
+		content: counter(item, decimal-leading-zero);
+		font-family: $satReg;
+		font-weight: 400;
+		font-size: 13px;
+		line-height: 160%;
+		letter-spacing: 0.12em;
+		text-transform: uppercase;
+		color: $textMuted;
+	}
+
+}
+.item-skills {}
+.item-skills__title {
+	margin-bottom: 8px;
+	font-family: $satL;
+	font-weight: 300;
+	font-size: 24px;
+	line-height: 130%;
+	letter-spacing: 0.04em;
+	text-transform: uppercase;
+	color: $textDefault;
+}
+.item-skills__text {
+	margin-bottom: 32px;
+	font-family: $chillReg;
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 180%;
+	color: $textMuted;
+}
+/*--------------------END skills----------------------*/ 
