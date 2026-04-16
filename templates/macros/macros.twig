@@ -8,7 +8,6 @@
     
 {% macro blockhead(label, title, span, text, modClass) %}
     <div class="{{modClass ? 'blockhead'~' '~modClass : 'blockhead'}}">
-        <p>{{modClass?"blockhead "~modClass:"blockhead"}}</p>
         {% if label %}
             <span class="blockhead__label">{{label}}</span>
         {% endif %}
@@ -36,12 +35,12 @@
     
 {% macro selwork(img, title) %}
     <article class="selwork">
-        <picture class="selwork__pict">
-            <img src="src/assets/img/selected/{{ img }}" alt="selwork">
-        </picture>
-        <div class="selwork__body">
+        <a href="#" class="selwork__pict">
+            <img class="selwork__img" src="/src/assets/img/selected/{{ img }}" alt="selwork">
+        </a>
+        <div class="selwork__body blur-border">
             <h2 class="selwork__title">{{title}}</h2>
-            <a href="#" class="selwork__category">Webdesign<a>  
+            <a href="#" class="selwork__category">Webdesign</a>  
         </div>
     </article>
 {% endmacro %}

@@ -213,4 +213,10 @@
   font-family: $satL;
   color: $textMuted;
 }
+.blur-border{
+ border: 1px solid $border;
+ color: $textDefault;
+ border-radius: 2px;
+ backdrop-filter: blur(15px);
+}
 /*--------------------END ui----------------------*/ 

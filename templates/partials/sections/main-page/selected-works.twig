@@ -3,10 +3,11 @@
 	<div class="selworks__wrapper">
 		<div class="selworks__header">
 			{{ blockhead(false, 'Selected', 'Work', false, 'selworks__blockhead') }}
+			<a href="#" class="selworks__see-all btn btn--arrow-round">See all</a>
 		</div>
 		<div class="selworks__list">
 			{% for key, value in site.selectedWorks %}
-				{{ selwork((key+1)+'.jpg', value) }}
+				{{ selwork((key+1)~'.jpg', value) }}
 			{% endfor %}
 		</div>
 	</div>
