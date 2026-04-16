@@ -1,0 +1,22 @@
+/*--------------------process----------------------*/
+.process {
+	@include adaptive-value('padding-top', 160, 24, 1);
+}
+.process__wrapper {}
+.process__top {
+	.blockhead__title{
+			max-width: 710px;
+		  @include adaptive-value('font-size', 128, 45, 1);
+	}
+	.blockhead__text {
+ 		text-wrap: auto;
+  		@include adaptive-value('font-size', 20, 16, 1);
+  	}
+}
+.process__blockhead {}
+.process__nandler {}
+.scroll-down {}
+.blur-border {}
+.icon-font {}
+.arrow-down {}
+/*--------------------END process----------------------*/ 

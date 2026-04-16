@@ -193,6 +193,7 @@
   font-size: 13px;
   line-height: 160%;
   letter-spacing: 0.12em;
+  text-transform: uppercase;
 }
 .blockhead__title {
   max-width: 1015px;
@@ -208,9 +209,9 @@
 .blockhead__text {
   max-width: 500px;
   // font-size: 24px;
-  @include adaptive-value('font-size', 24, 16, 1);
+  @include adaptive-value('font-size', 20, 16, 1);
   line-height: 150%;
-  font-family: $satL;
+  font-family: $chillReg;
   color: $textMuted;
 }
 .blur-border{
@@ -218,5 +219,6 @@
  color: $textDefault;
  border-radius: 2px;
  backdrop-filter: blur(15px);
+ background-color: $bgMuted;
 }
 /*--------------------END ui----------------------*/ 
