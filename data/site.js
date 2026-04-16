@@ -24,5 +24,6 @@ export default {
 			btn: 'About SEO'
 		}
 	
-	]
+	],
+	selectedWorks: ['Space', 'Nova', 'Sonic', 'Solar']
 };

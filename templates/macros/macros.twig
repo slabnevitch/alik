@@ -6,8 +6,9 @@
     {% endif %}
 {% endmacro %}
     
-{% macro blockhead(lablel, title, span, text) %}
-    <div class="blockhead">
+{% macro blockhead(label, title, span, text, modClass) %}
+    <div class="{{modClass ? 'blockhead'~' '~modClass : 'blockhead'}}">
+        <p>{{modClass?"blockhead "~modClass:"blockhead"}}</p>
         {% if label %}
             <span class="blockhead__label">{{label}}</span>
         {% endif %}
@@ -30,6 +31,18 @@
         <h2 class="item-skills__title">{{title}}</h2>
         <p class="item-skills__text">{{text}}</p>
         <a href="#" class="btn btn--arrow-round">{{btn}}</a>
+    </article>
+{% endmacro %}
+    
+{% macro selwork(img, title) %}
+    <article class="selwork">
+        <picture class="selwork__pict">
+            <img src="src/assets/img/selected/{{ img }}" alt="selwork">
+        </picture>
+        <div class="selwork__body">
+            <h2 class="selwork__title">{{title}}</h2>
+            <a href="#" class="selwork__category">Webdesign<a>  
+        </div>
     </article>
 {% endmacro %}
     
