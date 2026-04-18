@@ -48,14 +48,16 @@
 {% macro card(label, subtitle, title, text, list, addedClass) %}
     <article class="{{ not addedClass ? 'card blur-border' : 'card blur-border '~ addedClass}}">
        {% if label %}
-            <div class="card__label">{{label}}</div>
+            <div class="card__label blur-border">{{label}}</div>
+        {% endif %}
+
+        {% if subtitle %}
+            <div class="card__subtitle">{{subtitle}}</div>
         {% endif %}
         <h3 class="card__title">{{title}}</h3>
 
         {% if text %}
-            <div class="card__text">
-                <p>{{text}}</p>
-            </div>
+            <div class="card__text">{{text}}</div>
         {% endif %}
 
         {% if list %}

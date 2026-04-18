@@ -37,6 +37,10 @@
 		content: '';
 		width: 1px;
 		background-color: $border;
+
+		@include max-screen($md){
+			display: none;
+		}
 	}
 }
 .scroll-down {
@@ -61,31 +65,61 @@
 	}
 }
 .process__items {
+	padding-top: 20px;
 	display: flex;
 	flex-direction: column;
-	align-items: flex-end;
 	counter-reset: step;
+	row-gap: 40px;
+
+	@include min-screen($md){
+		padding-top:0;
+		align-items: flex-end;
+		row-gap: 0;
+	}
 }
 .process__item {
 	position: relative;
-	width: 50%;
+	padding-left:15px;
+
+	@media (min-width: em(991.8)) {
+		@include adaptive-value('padding-left', 100, 0, 1);
+		
+	}
+
+	@include min-screen($md){
+		width: 50%;	
+	}
 
 	&:nth-child(even){
 		align-self: flex-start;	
-		@include adaptive-value('padding-right', 100, 0, 1);
+		
+
+		@media (min-width: em(991.8)) {
+			padding-left: 0;
+			@include adaptive-value('padding-right', 100, 0, 1);
+			
+		}
 
 		&:before{
 			right: -20px;
+
+			@include max-screen($md){
+				right: auto;
+				left: 10px;
+			}
 		}
 		&:after{
 			right: 0;
 		}
 	}
 	&:nth-child(odd){
-		@include adaptive-value('padding-left', 100, 0, 1);
 		&:before{
 
 			left: -20px;
+
+			@include max-screen($md){
+				left: 10px;
+			}
 		}
 		&:after{
 			left: -1px;
@@ -94,7 +128,9 @@
 	}
 	
 	&:not(:first-child){
-		margin-top: -50px;
+		@include min-screen($md){
+			margin-top: -50px;	
+		}
 	}
 	&:last-child{
 		&:after{
@@ -123,6 +159,11 @@
 		@extend .blur-border;
 		outline: 16px solid $bg;
 		z-index: 2;
+
+		@include max-screen($md){
+			top: 0;
+			outline-width: 8px;
+		}
 	}
 	&:after{
 		content: '';
@@ -130,6 +171,10 @@
 		width: 1px;
 		height: 100%;
 		background-color: $border;
+
+		@include max-screen($md){
+			display: none;
+		}
 	}
 }
 .item-process__body {
