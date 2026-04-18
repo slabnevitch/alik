@@ -1,4 +1,4 @@
-{% from "../../../macros/macros.twig" import blockhead %}
+{% from "../../../macros/macros.twig" import blockhead, card %}
 <section class="process">
 	<div class="process__wrapper">
 		<div class="process__top">
@@ -10,6 +10,13 @@
 					<i class="icon-font arrow-down"></i>
 				</button>
 			</div>
+		</div>
+		<div class="process__items">
+				{% for item in site.steps %}
+					<div class="process__item item-process">
+						{{ card(item.label, item.subtitle, item.title, item.text, item.list, 'item-process__body') }}
+					</div>
+				{% endfor %}
 		</div>
 
 	</div>

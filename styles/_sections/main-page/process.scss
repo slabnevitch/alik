@@ -1,9 +1,16 @@
 /*--------------------process----------------------*/
 .process {
-	@include adaptive-value('padding-top', 160, 24, 1);
+	// @include adaptive-value('padding-top', 160, 24, 1);
 }
 .process__wrapper {}
 .process__top {
+	padding-top: 24px;
+	min-height: 100svh;
+	// max-height: 753px;
+	display: grid;
+	grid-template-rows: 1fr auto;
+	row-gap: 48px;
+
 	.blockhead__title{
 			max-width: 710px;
 		  @include adaptive-value('font-size', 128, 45, 1);
@@ -13,10 +20,72 @@
   		@include adaptive-value('font-size', 20, 16, 1);
   	}
 }
-.process__blockhead {}
-.process__nandler {}
-.scroll-down {}
-.blur-border {}
-.icon-font {}
-.arrow-down {}
+.process__blockhead {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+.process__nandler {
+	@include adaptive-value('height', 160, 80, 1);
+	position: relative;
+	display: grid;
+	grid-template-rows: 46px 1fr;
+	row-gap: 16px;
+	justify-items: center;
+
+	&:after{
+		content: '';
+		width: 1px;
+		background-color: $border;
+	}
+}
+.scroll-down {
+	width: 46px;
+	height: 45px;
+	border-radius: 50%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	transition: background-color .2s ease, color 0.2s ease;
+
+	@media (any-hover: hover) { //только для устройств с ховером
+			cursor: pointer;
+			&:hover{
+				background-color: $textDefault;
+				color: $textInv;
+			}
+		}
+
+	.icon-font{
+		font-size: 15px;
+	}
+}
+.process__items {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
+}
+.process__item {
+	position: relative;
+	width: 50%;
+	
+	&:nth-child(even){
+		align-self: flex-start;	
+	}
+	&:before{
+		content: '';
+	}
+	&:after{
+		content: '';
+	}
+	&:before,
+	&:after{
+		content: '';
+		position: absolute;
+	}
+}
+.item-process__body {
+
+
+}
 /*--------------------END process----------------------*/ 

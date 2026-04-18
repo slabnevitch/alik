@@ -25,5 +25,61 @@ export default {
 		}
 	
 	],
-	selectedWorks: ['Space', 'Nova', 'Sonic', 'Solar']
+	selectedWorks: ['Space', 'Nova', 'Sonic', 'Solar'],
+	steps: [
+		{
+			label: '2 Hours',
+			subtitle: 'Do we Match?',
+			title: 'Discovery Call',
+			text: 'Before we start, we determine if and how I can help you. What are your requirements for your new website? Why do you need a new website? What goals do you have, and what problems can we solve with a new website?',
+			list: [
+				'We get to know each other better',
+				'Determine how I can best assist you',
+				'Understand the goals you have for your website'
+			]
+		},
+		{
+			label: '1 Week',
+			subtitle: 'lorem ipsum',
+			title: 'Concept & STrategy',
+			text: 'Together, we develop a strategy that successfully combines your goals with the needs of your target audience. Based on this concept, I create the first wireframes and an interactive prototype. This provides us with a very good impression of the website and the user interface.',
+			list: [
+				'UX Design',
+				'Wireframes',
+				'Interactive Prototype'
+			]
+		},
+		{
+			label: '1 week',
+			subtitle: 'SOme MAgic',
+			title: 'web Design',
+			text: 'Now comes the magic. Based on the previously developed concept, I create a high-end screen design perfectly tailored to your brand. A web design that sets you apart from your competition, fits your target audience ideally, and provides an excellent user experience.',
+			list: [
+				'High-end web design tailored to your brand',
+				'Interactive prototype of the design'
+			]
+		},
+		{
+			label: '2 Weeks',
+			subtitle: 'More Magic',
+			title: 'Development',
+			text: 'In this step, we breathe life into your new high-end design. You will receive a custom-built website using a modular web design system and CMS integration. Animations will add the necessary flair to your site and set you apart from the boring competition.',
+			list: [
+				'Custom framer website',
+				'Modular web design systems',
+				'CMS integration'
+			]
+		},
+		{
+			label: '2 hours',
+			subtitle: 'ready to go',
+			title: 'WEbsite onboarding',
+			text: "In a personal Framer workshop, I will show you how to make changes to your new website quickly and easily. Additionally, you will receive personalized Framer video tutorials that you can access at any time. Edit your Framer website without a complicated backend or the need for an additional programmer. It's as simple as that.",
+			list: [
+				'Custom framer website',
+				'Modular web design systems',
+				'CMS integration'
+			]
+		}
+	]
 };
