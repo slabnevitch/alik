@@ -6,12 +6,12 @@
 				{{blockhead('THe PRocess',' Your Website', 'in 5 steps', 'Our process ensures that we create a website tailored to your business needs.', modClass)}}
 			</div>
 			<div class="process__nandler">
-				<button type="button" class="scroll-down blur-border">
+				<a href="#steps" class="scroll-down blur-border">
 					<i class="icon-font arrow-down"></i>
-				</button>
+				</a>
 			</div>
 		</div>
-		<div class="process__items">
+		<div id="steps" class="process__items">
 				{% for item in site.steps %}
 					<div class="process__item item-process">
 						{{ card(item.label, item.subtitle, item.title, item.text, item.list, 'item-process__body') }}
