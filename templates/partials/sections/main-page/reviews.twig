@@ -1,13 +1,13 @@
-<section class="reviews">
-	<div class="sections__wrapper">
+<section class="reviews__itemsreviews">
+	<div class="reviews__wrapper">
 		{{ mixins.blockhead(false, 'What my', 'clients say', 'See what my clients have to say about working with me and the results I helped them achieve.', 'reviews__blockhead') }}
 
 		<div class="reviews__items">
 			{% for key, value in site.reviews %}
-				<div class="review">
+				<div class="review blur-border">
 					<img class="review__logo" src="src/assets/img/clients/logo-{{key}}.svg" alt="logo">
 					
-					<h4 class="review__title">{{value.tite}}</h4>
+					<h4 class="review__title">{{value.title}}</h4>
 					
 					<div class="review__text">
 						<p>{{value.text}}</p>
