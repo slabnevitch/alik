@@ -94,6 +94,30 @@ export default {
 			text: 'I had the pleasure of working with Arik on a website development project and was blown away by his expertise and professionalism. He made the process seamless and delivered a website that exceeded our expectations. I highly recommend Arik for all your web development needs.',
 			name: 'Karen Lee',
 			comp: 'Redwood Technologies'
+		},
+		{
+			title: 'Web Design and Content Solutions: Stand Out from the Crowd.',
+			text: "Arik's SEO services have helped my business improve its online presence and increase traffic to our website. He is knowledgeable, professional, and provides excellent results. I highly recommend him for all your SEO needs.",
+			name: 'Emily Davis',
+			comp: 'Greenway Industries'
+		},
+		{
+			title: 'Expert Webflow and SEO Services: Excellent Work, Great Results.',
+			text: "Working with Arik on my website redesign was a fantastic experience. He was able to take my vision and turn it into a beautiful and functional website. His attention to detail and creative approach is unmatched. I couldn't be happier with the end result.",
+			name: 'David Kim',
+			comp: 'Design Inc.'
+		},
+		{
+			title: 'Expertise in Web Design: Second to None with Arik.',
+			text: "Arik is not only an exceptional web designer, but also a pleasure to work with. He took the time to understand my business and its unique needs, and created a website that perfectly represents my brand. I highly recommend Arik's services to anyone looking for a top-quality web designer.",
+			name: 'Andrew Thompson',
+			comp: 'Silverstone Corporation'
+		},
+		{
+			title: 'High-Quality Web Design: Exceptional Attention to Detail with Arik.',
+			text: "Arik's development services are top-notch. He is able to take complex ideas and turn them into functional, user-friendly websites. His attention to detail and commitment to customer satisfaction are unmatched. I highly recommend Arik for all your web development needs.",
+			name: 'Ryan Chen',
+			comp: 'Golden Gate Solutions'
 		}
 	]
 };

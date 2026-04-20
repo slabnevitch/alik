@@ -1,0 +1,28 @@
+<section class="reviews">
+	<div class="sections__wrapper">
+		{{ mixins.blockhead(false, 'What my', 'clients say', 'See what my clients have to say about working with me and the results I helped them achieve.', 'reviews__blockhead') }}
+
+		<div class="reviews__items">
+			{% for key, value in site.reviews %}
+				<div class="review">
+					<img class="review__logo" src="src/assets/img/clients/logo-{{key}}.svg" alt="logo">
+					
+					<h4 class="review__title">{{value.tite}}</h4>
+					
+					<div class="review__text">
+						<p>{{value.text}}</p>
+					</div>
+					
+					<div class="review__author author-review">
+						<img src="/src/assets/img/reviews/{{ key }}.jpg" alt="author" class="author-review__avatar">
+						<div class="author-review__content">
+							<div class="author-review__name">{{value.name}}</div>
+							<div class="author-review__comp">{{value.comp}}</div>
+						</div>
+					</div>
+				</div>
+			{% endfor %}
+
+		</div>
+	</div>
+</section>
