@@ -12,6 +12,10 @@
 {% endblock %}
 </head>
 <body>
+{# импорт всех макросов #}
+{% import '../macros/macros.twig' as mixins %}
+
+{# {% import template %} #}
 {% block page %}
 	<div class="wrapper">
 		{% block header %}
