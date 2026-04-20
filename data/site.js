@@ -81,5 +81,19 @@ export default {
 				'CMS integration'
 			]
 		}
+	],
+	reviews: [
+		{
+			title: 'Amazing Results with Arik’s Premium Web Design Services.',
+			text: 'Arik is a top-notch web designer who created a stunning website for my business. He was attentive to my needs and provided excellent customer service throughout the entire process. I highly recommend his services.',
+			name: 'John Smith',
+			comp: 'ABC Company'
+		},
+		{
+			title: 'Professional, Collaborative Web Design Experience with Arik.',
+			text: 'I had the pleasure of working with Arik on a website development project and was blown away by his expertise and professionalism. He made the process seamless and delivered a website that exceeded our expectations. I highly recommend Arik for all your web development needs.',
+			name: 'Karen Lee',
+			comp: 'Redwood Technologies'
+		}
 	]
 };
