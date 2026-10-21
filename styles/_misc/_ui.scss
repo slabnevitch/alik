@@ -304,4 +304,47 @@ line-height: 180%;
  backdrop-filter: blur(15px);
  background-color: $bgMuted;
 }
+.about__socials {}
+.socials {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.socials__item {
+  flex-shrink: 0;
+  list-style-type: none;
+}
+.blur-border {}
+.social__link {
+  width: 46px;
+  aspect-ratio: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+    font-size: 16px;
+  transition: background-color .15s;
+
+@media (any-hover: hover) { //только для устройств с ховером
+
+       &:hover{
+        background-color: $border;
+      } 
+
+  }
+
+  &:before{
+    // width: 100%;
+    font-size: inherit;
+  }
+  &.soc-be{
+    font-size: 13px;
+  }
+}
+.icon-font {}
+.soc-tw {}
+.soc-inst {}
+.soc-ball {}
+.soc-be {}
 /*--------------------END ui----------------------*/ 
