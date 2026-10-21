@@ -1,0 +1,22 @@
+/*--------------------about----------------------*/
+.about {}
+.about__container {}
+.about__header {}
+.about__visual {
+	margin-inline: auto;
+  display: block;
+  max-width: none;
+  width: 100vw;
+  height: 50dvh;
+  translate: 0 5%;
+  object-fit: contain;
+  mix-blend-mode: lighten
+}
+.about_text {}
+.about__body {}
+.about__title {}
+.about__content {}
+.about__text {}
+.about__socials {}
+
+/*--------------------END about----------------------*/ 
