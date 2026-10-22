@@ -6,11 +6,19 @@
 .reviews__blockhead {
 	@include adaptive-value('margin-bottom', 64, 24, 1);
 }
+.reviews__itemsreviews{
+	@include adaptive-value('padding-top', 160, 24, 1);
+
+}
 .reviews__items {
 	max-width: 1200px;
 	margin: 0 auto;
-	column-count: 2;
-	column-gap: 32px;
+
+	@include min-screen($sm){
+		column-count: 2;
+		column-gap: 32px;
+		
+	}
 }
 .review {
 	margin-bottom: 32px;
