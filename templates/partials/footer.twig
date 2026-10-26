@@ -1,9 +1,40 @@
 <footer class="footer" style="padding-bottom: 100px;">
+	<div class="footer__wrapper">
+		<div class="footer__body">
+			<div class="footer__content">
+				<a href="#" class="footer__logo">
+					<img src="/src/assets/img/logo.svg" alt="alt">
+				</a>
+				{% set socials = [{title:'Twitter', icon:'soc-tw'}, {title:'Dribbble', icon:'soc-ins'}, {title:'Instagram', icon:'soc-ball'}, {title:'Behance', icon:'soc-be'}] %}
+				<ul class="footer__socials socials socials--text">
+					{% for soc in socials %}
+						<li class="socials__item">
+							<a href="#" class="blur-border social__link icon-font {{ soc.icon }}">{{soc.title}}</a>
+						</li>
+					{% endfor %}
+				</ul>
+			</div>
+			<div class="footer__menus">
+				<div class="footer__menu menu-footer" data-spoilers data-minimizeSiblings>
+					<details data-spoiler-item>
+						<summary class="menu-footer__title" data-spoiler-title>Pages</summary>
+
+						{% set menu1 = ['Home','Services','About','Contact'] %}
+						<div data-spoiler-content>
+							<ul class="menu-footer__list">
+								{% for item in menu1 %}
+									<li class="menu-footer__item">
+										<a href="#" class="menu-footer__link">{{item}}</a>
+									</li>
+								{% endfor %}
+							</ul>
+						</div>
+						
+					</details>
+					
+				</div>
+			</div>
+		</div>	
+	</div>
 	
-	<h1>Footer</h1>
-	<i class="icon-font in"></i>
-	
-	<svg class="icon icon-profile">
-	    <use xlink:href="assets/img/spritemap.svg#sprite-profile"></use>
-	</svg>
 </footer>
