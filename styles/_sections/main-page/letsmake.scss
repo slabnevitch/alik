@@ -1,0 +1,18 @@
+/*--------------------letsmake----------------------*/
+.letsmake {
+	@include adaptive-value('padding-bottom', 160, 40, 1);
+}
+.letsmake__marquee {
+	@include adaptive-value('margin-bottom', 160, 40, 1);
+	background: rgba(218, 197, 167, 0.1);
+}
+.marquee-letsmake {}
+.marquee-letsmake__item {
+	padding-block: 16px;
+	color: $textDefault;
+	span{
+		padding-inline: 16px;
+	}
+}
+.letsmake__wrapper {}
+/*--------------------END letsmake----------------------*/ 
