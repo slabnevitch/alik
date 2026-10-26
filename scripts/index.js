@@ -8,4 +8,5 @@ import './helpers/toggle-mnu';
 // window.bootstrap = bootstrap;
 
 const Marquee3k = require('./main/marquee3k.js');
+// require('./main/spoilers/spoilers.js');
 Marquee3k.init();
