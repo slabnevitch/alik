@@ -41,6 +41,10 @@
       [data-spoiler-item].is-open & {
         transform: rotate(-180deg);
       }
+
+      @include min-screen($sm){
+        display: none;
+      }
     }
 
     &::marker,

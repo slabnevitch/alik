@@ -5,11 +5,11 @@
 				<a href="#" class="footer__logo">
 					<img src="/src/assets/img/logo.svg" alt="alt">
 				</a>
-				{% set socials = [{title:'Twitter', icon:'soc-tw'}, {title:'Dribbble', icon:'soc-ins'}, {title:'Instagram', icon:'soc-ball'}, {title:'Behance', icon:'soc-be'}] %}
-				<ul class="footer__socials socials socials--text">
+				{% set socials = [{title:'Twitter', icon:'soc-tw'}, {title:'Dribbble', icon:'soc-ball'}, {title:'Instagram', icon:'soc-inst'}, {title:'Behance', icon:'soc-be'}] %}
+				<ul class="footer__socials socials socials--vert">
 					{% for soc in socials %}
 						<li class="socials__item">
-							<a href="#" class="blur-border social__link icon-font {{ soc.icon }}">{{soc.title}}</a>
+							<a href="#" class="social__link social__link--text icon-font {{ soc.icon }}">{{soc.title}}</a>
 						</li>
 					{% endfor %}
 				</ul>
@@ -33,9 +33,35 @@
 								</li>
 							</ul>
 						</div>
-						
 					</details>
-					
+				</div>
+				<div class="footer__menu menu-footer" data-spoilers data-minimizeSiblings data-point="767.98">
+					<details data-spoiler-item>
+						<summary class="menu-footer__title" data-spoiler-title>CMS</summary>
+						<div data-spoiler-content>
+							<ul class="menu-footer__list">
+								{% for item in ['Work','Work Single','Blog','Blog Post'] %}
+									<li class="menu-footer__item">
+										<a href="#" class="menu-footer__link">{{item}}</a>
+									</li>
+								{% endfor %}
+							</ul>
+						</div>
+					</details>
+				</div>
+				<div class="footer__menu menu-footer" data-spoilers data-minimizeSiblings data-point="767.98">
+					<details data-spoiler-item>
+						<summary class="menu-footer__title" data-spoiler-title>Utility Pages</summary>
+						<div data-spoiler-content>
+							<ul class="menu-footer__list">
+								{% for item in ['404 Error Page','Password Protected','Styleguide','Licensing','Changelog'] %}
+									<li class="menu-footer__item">
+										<a href="#" class="menu-footer__link">{{item}}</a>
+									</li>
+								{% endfor %}
+							</ul>
+						</div>
+					</details>
 				</div>
 			</div>
 		</div>	

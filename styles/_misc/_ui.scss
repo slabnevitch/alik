@@ -310,36 +310,65 @@ line-height: 180%;
   align-items: center;
   flex-wrap: wrap;
   gap: 10px;
+
+  &--vert{
+    flex-direction: column;
+    row-gap: 16px;
+    column-gap: 0;
+    align-items: flex-start;
+  }
 }
 .socials__item {
   flex-shrink: 0;
   list-style-type: none;
 }
-.blur-border {}
 .social__link {
-  width: 46px;
-  aspect-ratio: 1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 50%;
+ border: none;
+  
     font-size: 16px;
   transition: background-color .15s;
+
+  &--text{
+    display: flex;
+    align-items: center;
+    column-gap: 16px;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 160%;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: $textMuted;
+    font-family: $satReg;
+  }
 
 @media (any-hover: hover) { //только для устройств с ховером
 
        &:hover{
-        background-color: $border;
+          color: $textDefault;
+        &:before{
+          background-color: $border;
+        }
       } 
 
   }
 
   &:before{
-    // width: 100%;
-    font-size: inherit;
+    font: normal normal normal 24px/1 icon-font;
+    @extend .blur-border;
+     width: 46px;
+    aspect-ratio: 1;
+    display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+    font-size: 16px;
+
   }
   &.soc-be{
-    font-size: 13px;
+
+     &:before{
+      font-size: 12px;
+     }
   }
 }
 .icon-font {}
