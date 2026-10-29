@@ -312,10 +312,14 @@ line-height: 180%;
   gap: 10px;
 
   &--vert{
-    flex-direction: column;
-    row-gap: 16px;
-    column-gap: 0;
-    align-items: flex-start;
+
+    @include min-screen($sm){
+      flex-direction: column;
+      row-gap: 16px;
+      column-gap: 0;
+      align-items: flex-start;
+      
+    }
   }
 }
 .socials__item {
@@ -339,6 +343,11 @@ line-height: 180%;
     text-transform: uppercase;
     color: $textMuted;
     font-family: $satReg;
+
+    @include max-screen($xss){
+      font-size: 0;
+      column-gap: 0;
+    }
   }
 
 @media (any-hover: hover) { //только для устройств с ховером
@@ -355,19 +364,25 @@ line-height: 180%;
   &:before{
     font: normal normal normal 24px/1 icon-font;
     @extend .blur-border;
-     width: 46px;
+    width: 46px;
     aspect-ratio: 1;
     display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
     font-size: 16px;
 
+    @include max-screen($xss){
+      font-size: 16px;
+    }
   }
   &.soc-be{
 
      &:before{
       font-size: 12px;
+      @include max-screen($xss){
+        font-size: 12px;
+      }
      }
   }
 }

@@ -1,6 +1,7 @@
 /*--------------------letsmake----------------------*/
 .letsmake {
 	@include adaptive-value('padding-bottom', 160, 40, 1);
+	background-color: $bgMuted;
 }
 .letsmake__marquee {
 	@include adaptive-value('margin-bottom', 160, 40, 1);

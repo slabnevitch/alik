@@ -15,56 +15,65 @@
 				</ul>
 			</div>
 			<div class="footer__menus">
-				<div class="footer__menu menu-footer" data-spoilers data-minimizeSiblings data-point="767.98">
-					<details data-spoiler-item>
-						<summary class="menu-footer__title" data-spoiler-title>Pages</summary>
+				{% for i in 0..2 %}
+					<div class="footer__menu menu-footer" data-spoilers data-minimizeSiblings data-point="576">
+						<details data-spoiler-item>
+							<summary class="menu-footer__title" data-spoiler-title>Pages</summary>
 
-						{% set menu1 = ['Home','Services','About','Contact'] %}
-						<div data-spoiler-content>
-							<ul class="menu-footer__list">
-								{% for item in menu1 %}
+							{% set menu1 = ['Home','Services','About','Contact'] %}
+							<div data-spoiler-content>
+								<ul class="menu-footer__list">
+									{% for item in menu1 %}
+										<li class="menu-footer__item">
+											<a href="#" class="menu-footer__link">{{item}}</a>
+										</li>
+									{% endfor %}
 									<li class="menu-footer__item">
-										<a href="#" class="menu-footer__link">{{item}}</a>
+										<button class="btn btn--arrow btn--inv">More Templates<i class="icon-font arrrow-r-t"></i></button>
+										
 									</li>
-								{% endfor %}
-								<li class="menu-footer__item">
-									<button class="btn btn--arrow btn--inv">More Templates<i class="icon-font arrrow-r-t"></i></button>
-									
-								</li>
-							</ul>
-						</div>
-					</details>
-				</div>
-				<div class="footer__menu menu-footer" data-spoilers data-minimizeSiblings data-point="767.98">
-					<details data-spoiler-item>
-						<summary class="menu-footer__title" data-spoiler-title>CMS</summary>
-						<div data-spoiler-content>
-							<ul class="menu-footer__list">
-								{% for item in ['Work','Work Single','Blog','Blog Post'] %}
-									<li class="menu-footer__item">
-										<a href="#" class="menu-footer__link">{{item}}</a>
-									</li>
-								{% endfor %}
-							</ul>
-						</div>
-					</details>
-				</div>
-				<div class="footer__menu menu-footer" data-spoilers data-minimizeSiblings data-point="767.98">
-					<details data-spoiler-item>
-						<summary class="menu-footer__title" data-spoiler-title>Utility Pages</summary>
-						<div data-spoiler-content>
-							<ul class="menu-footer__list">
-								{% for item in ['404 Error Page','Password Protected','Styleguide','Licensing','Changelog'] %}
-									<li class="menu-footer__item">
-										<a href="#" class="menu-footer__link">{{item}}</a>
-									</li>
-								{% endfor %}
-							</ul>
-						</div>
-					</details>
-				</div>
+								</ul>
+							</div>
+						</details>
+					</div>
+					<div class="footer__menu menu-footer" data-spoilers data-minimizeSiblings data-point="576">
+						<details data-spoiler-item>
+							<summary class="menu-footer__title" data-spoiler-title>CMS</summary>
+							<div data-spoiler-content>
+								<ul class="menu-footer__list">
+									{% for item in ['Work','Work Single','Blog','Blog Post'] %}
+										<li class="menu-footer__item">
+											<a href="#" class="menu-footer__link">{{item}}</a>
+										</li>
+									{% endfor %}
+								</ul>
+							</div>
+						</details>
+					</div>
+					<div class="footer__menu menu-footer" data-spoilers data-minimizeSiblings data-point="576">
+						<details data-spoiler-item>
+							<summary class="menu-footer__title" data-spoiler-title>Utility Pages</summary>
+							<div data-spoiler-content>
+								<ul class="menu-footer__list">
+									{% for item in ['404 Error Page','Password Protected','Styleguide','Licensing','Changelog'] %}
+										<li class="menu-footer__item">
+											<a href="#" class="menu-footer__link">{{item}}</a>
+										</li>
+									{% endfor %}
+								</ul>
+							</div>
+						</details>
+					</div>
+				{% endfor %}
+				
 			</div>
-		</div>	
+		</div>
+		<div class="footer__bottom bottom-footer">
+			<div class="bottom-footer__cr">© 2022 Made by Pawel Gola. Powered by Framer..</div>
+			<button class="bottom-footer__up icon-font arrow-top">
+				To Top
+			</button>
+		</div>
 	</div>
 	
 </footer>

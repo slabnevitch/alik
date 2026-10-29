@@ -42,7 +42,7 @@
         transform: rotate(-180deg);
       }
 
-      @include min-screen($sm){
+      @include min-screen($xs){
         display: none;
       }
     }
