@@ -104,6 +104,25 @@
   }
    
 }
+.btn-downtext{
+  display: inline-flex;
+  align-items: center;
+  column-gap: 16px;
+  font-family: $satReg;
+  text-transform: uppercase;
+  transition: color .2s;
+
+  @media (any-hover: hover) { //только для устройств с ховером
+      cursor: pointer;
+      &:hover{
+        color:$textDefault;
+        .scroll-down{
+          background-color: $textDefault;
+          color: $textInv;
+        }
+      }
+    }
+}
 .toggle-mnu{
 	position: relative;
 	flex-shrink: 0;

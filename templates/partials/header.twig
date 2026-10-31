@@ -1,15 +1,12 @@
 <header class="header">
 	<div class="header__wrapper">
-		<h1 class="text-red-500 text-3xl font-bold underline">
-    	<span class="icon-font phone"></span>
-  </h1>
 		<div class="header__body">
 			{% if pageName == "index" %}
 			    <div class="header__logo">
 			    	<img src="/src/assets/img/logo.svg" alt="logo">
 			    </div>
 			{% else %}
-			    <a href="#" class="header__logo">
+			    <a href="index.html" class="header__logo">
 			    	<img src="/src/assets/img/logo.svg" alt="logo">
 			    </a>
 			{% endif %}
@@ -18,7 +15,7 @@
 				<ul class="menu__list">
 					{% for item in site.mainMenu %} {# site - объект с данными из src/data/site.js#}
 						<li class="menu__item">
-							<a href="{{ item.url }}" class="menu__link">{{ item.name}}</a>
+							<a href="{{ item.url }}" class="{{item.name==pageName?'menu__link active':'menu__link'}}">{{ item.name}}</a>
 						</li>
 					{% endfor %}
 					<li class="menu__item">
