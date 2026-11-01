@@ -1,8 +1,43 @@
-.counters {}
-.counters__wrapper {}
+.counters {
+	@include adaptive-value('padding-top', 80, 20, 1);
+	@include adaptive-value('padding-bottom', 160, 40, 1);
+}
+.counters__wrapper {
+	max-width: 1230px;
+
+}
+.counters__items {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+	@include adaptive-value('column-gap', 64, 20, 1);
+}
 .counters__item {
-	height: 100vh;
+	flex: 1 1 10px;
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+}
+.counters__item-title {
+	font-family: $satReg;
+	font-size: 13px;
+	line-height: 160%;
+	letter-spacing: 0.12em;
+	text-align: center;
+	text-transform: uppercase;
 }
 .counters__val {
-	font-size: 50px;
+	white-space: nowrap;
+	font-family: $chillL;
+	@include adaptive-value('font-size', 64, 48, 1);
+	line-height: 110%;
+	text-align: center;
+	text-transform: uppercase;
+
+	.purecounter{
+		text-align: right;
+		display: inline-block;
+		@include adaptive-value('min-width', 97.1, 72.1, 1);
+
+	}
 }

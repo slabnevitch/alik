@@ -119,5 +119,25 @@ export default {
 			name: 'Ryan Chen',
 			comp: 'Golden Gate Solutions'
 		}
+	],
+	services: [
+		{
+			label: 'Webdesign',
+			title: 'Transforming Your Ideas into Reality',
+			table: [
+				{
+					name: 'Concept',
+					val: "I take time to understand your business needs and audience to develop a unique concept for your website. I'll create wireframes that serve as the foundation for your site's design and functionality."
+				},
+				{
+					name: 'UX / Ui Design',
+					val: "I'll design a user-friendly interface that is visually appealing and engages your target audience. Your website will be created to meet your brand's needs and goals while ensuring a seamless user experience."
+				},
+				{
+					name: 'Prototype',
+					val: "With an interactive prototype, you'll have the ability to test your website's functionality before it goes live. This will ensure that your website's design and user experience are optimized for your audience's needs and preferences."
+				}
+			]
+		}
 	]
 };

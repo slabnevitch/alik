@@ -12,7 +12,7 @@ import PureCounter from "./main/purecounter_vanilla.js";
 const Marquee3k = require('./main/marquee3k.js');
 Marquee3k.init();
 
-// new PureCounter();
+new PureCounter();
 
 // (function(){
 //   var detailsSpoilers = function(minimizeSiblings){

@@ -1,0 +1,25 @@
+<section class="services">
+	<div class="services__wrapper">
+		{% for key, value in site.services %}
+			<article class="service">
+				<div class="service__label">{{value.label}}</div>
+				<h2 class="service__title">
+					<a href="@" class="service__title-link">{{value.title}}</a>
+				</h2>
+				<a class="service__link-image">
+					<img src="/src/assets/img/selected/{{key+1}}.jpg" alt="" class="service__image">
+				</a>
+				<table class="service__table table-service">
+					{% for i, val in value.table %}
+						<tr class="table-service__row">
+							<td class="table-service__label">{{val.name}}</td>
+							<td class="table-service__text">
+								<p>{{val.val}}</p>
+							</td>
+						</tr>
+					{% endfor %}
+				</table>
+			</article>
+		{% endfor %}
+	</div>
+</section>
