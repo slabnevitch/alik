@@ -1,7 +1,7 @@
 <section class="services">
 	<div class="services__wrapper">
 		{% for key, value in site.services %}
-			<article class="service">
+			<article class="service blur-border">
 				<div class="service__label">{{value.label}}</div>
 				<h2 class="service__title">
 					<a href="@" class="service__title-link">{{value.title}}</a>
@@ -14,7 +14,15 @@
 						<tr class="table-service__row">
 							<td class="table-service__label">{{val.name}}</td>
 							<td class="table-service__text">
-								<p>{{val.val}}</p>
+								{% if i==0 %}
+									{% for i in 0..3 %}
+										<p>{{val.val}}</p>
+									{% endfor %}
+								
+								{% else %}
+									<p>{{val.val}}</p>
+								{% endif %}
+
 							</td>
 						</tr>
 					{% endfor %}
