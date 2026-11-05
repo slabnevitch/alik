@@ -15,14 +15,33 @@
 							<td class="table-service__label">{{val.name}}</td>
 							<td class="table-service__text">
 								{% if i==0 %}
-									{% for i in 0..3 %}
-										<p>{{val.val}}</p>
-									{% endfor %}
+									<div class="read-more" data-more>
+										<div class="read-more__content" data-more-content data-more-height="115.2" >
+											{% for i in 0..3 %}
+												<p>{{val.val}}</p>
+											{% endfor %}
+										</div>
+										<div class="read-more__footer" data-more-footer>
+											<a href="#" class="read-more__btn table-service__more" data-more-trigger data-more-text-more="Show me more"
+											data-more-text-less="Show me less">
+											Show me more
+										</a>
+									</div>
+								</div>
 								
 								{% else %}
-									<p>{{val.val}}</p>
+									<div class="read-more" data-more>
+										<div class="read-more__content" data-more-content data-more-height="115.2" >
+											<p>{{val.val}}</p>
+										</div>
+										<div class="read-more__footer" data-more-footer>
+											<a href="#" class="read-more__btn table-service__more" data-more-trigger data-more-text-more="Show me more"
+											data-more-text-less="Show me less">
+											Show me more
+										</a>
+									</div>
+								</div>
 								{% endif %}
-
 							</td>
 						</tr>
 					{% endfor %}

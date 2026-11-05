@@ -1,0 +1,66 @@
+{% extends "templates/layouts/base.twig" %}
+
+{% set title = "About Arik" %}
+
+{% set pageName = "about" %}
+
+{% block content %}
+	<div class="arik-page">
+		<div class="__wrapper">
+			<section class="arik">
+				<figure data-da="arik__header,767.98,1" class="arik__picture">
+					<img src="/src/assets/img/hero/hero-img.png" alt="image№" class="arik__img">
+				</figure>
+
+				<div class="arik__body">
+					<div class="arik__header">
+						{{ mixins.blockhead(false, 'Arik', 'Andersson', 'Delivering Premium Web Design and Development Services to Boost Your Online Presence.','blockhead--about') }}
+						
+						<div class="arik__header-bottom">
+							<a href="#steps" class="btn-downtext">
+								<span class="scroll-down blur-border">
+									<i class="icon-font arrow-down"></i>
+
+								</span>
+								About Me
+							</a>
+						</div>
+					</div>
+
+					<div class="arik__content">
+						<div class="blur-border arik__about about-arik">
+							<div class="about-arik__label">Arik Andersson</div>
+							<h2 class="about-arik__title">Your Partner in Bringing Your Web Design Vision to Life</h2>
+							<div class="about-arik__text">
+								<p class="about-arik__par">As a freelance web designer and developer, I bring a unique combination of creativity and technical expertise to every project. With a keen eye for design and a passion for delivering user-friendly web experiences, I work closely with clients to understand their needs and bring their vision to life.</p>
+								<p class="about-arik__par">My approach is rooted in collaboration and communication, and I take pride in my ability to explain technical concepts in simple terms. Whether I'm developing a new website from scratch or optimizing an existing site for search engines, I always strive for excellence in both form and function. With a dedication to quality and a commitment to staying on top of the latest trends and technologies, I am confident in my ability to deliver exceptional results that exceed my clients' expectations.</p>
+							</div>
+							<div class="about-arik__pict">
+								<img class="about-arik__img" src="src/assets/img/arik-img.jpg" alt="shnipperson">
+							</div>
+						</div>
+						<ul class="arik__socials soc-block">
+							{% for item in site.arikSocials %}
+								<li class="soc-block__item">
+									<a href="#" target="_blank" class="blur-border soc-block__link icon-font {{ item.icon }}">{{item.title}}<i class="soc-block__arrow icon-font arrrow-r-t"></i></a>
+								</li>
+							{% endfor %}
+						</ul>
+						<div class="blur-border arik__awards awards">
+							<div class="awards__lable">awards</div>
+							<table class="awards__table table-awards">
+								{% for item in site.arikAwards %}
+									<tr class="table-awards__row">
+										<td class="table-awards__key">{{item.key}}</td>
+										<td class="table-awards__val">{{item.val}}</td>
+									</tr>
+								{% endfor %}
+							</table>
+						</div>
+					</div>
+				</div>
+			</section>
+			
+		</div>
+	</div>
+{% endblock %}

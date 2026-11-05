@@ -6,6 +6,8 @@ import '@/styles/index.scss';
 // import './helpers/focus-visible';
 import './main/spoilers/spoilers.js';
 import './helpers/toggle-mnu';
+import './helpers/dynamic-adaptive/da.min.js';
+import {ReadMore} from './main/more-less/more-less.js';
 // window.bootstrap = bootstrap;
 import PureCounter from "./main/purecounter_vanilla.js";
 
@@ -13,7 +15,8 @@ const Marquee3k = require('./main/marquee3k.js');
 Marquee3k.init();
 
 new PureCounter();
-
+const readMore = new ReadMore();
+console.log(readMore)
 // (function(){
 //   var detailsSpoilers = function(minimizeSiblings){
 //   var spoilers = Array.prototype.slice.call(document.querySelectorAll('[data-spoilers]')),                   

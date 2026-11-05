@@ -232,6 +232,10 @@
   line-height: 150%;
   font-family: $chillReg;
   color: $textMuted;
+
+  p{
+    margin: 0;
+  }
 }
 .card{
   position: relative;

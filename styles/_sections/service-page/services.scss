@@ -101,7 +101,10 @@
 		margin: 0;
 
 		&:not(:last-child){
-			margin-bottom: 15px;
+			margin-bottom: 1rem;
 		}
 	}
+}
+.table-service__more{
+	color: $textDefault;
 }

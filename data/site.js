@@ -4,7 +4,7 @@ export default {
 	mainMenu: [
 		{name: 'services', url: 'services.html'},
 		{name: 'work', url: 'work.html'},
-		{name: 'about', url: 'about.html'},
+		{name: 'about', url: 'arik.html'},
 		{name: 'blog', url: 'blog.html'}
 	],
 	skills: [
@@ -138,6 +138,40 @@ export default {
 					val: "With an interactive prototype, you'll have the ability to test your website's functionality before it goes live. This will ensure that your website's design and user experience are optimized for your audience's needs and preferences."
 				}
 			]
+		}
+	],
+	arikSocials: [
+		{title:'Instagram', icon:'soc-inst'},
+		{title:'Twitter', icon:'soc-tw'},
+		{title:'Facebook', icon:'soc-fb'},
+		{title:'Behance', icon:'soc-be'},
+		{title:'Dribbble', icon:'soc-ball'},
+		{title:'Pinterest', icon:'soc-pint'}
+	],
+	arikAwards: [
+		{
+			key: 'Awwwards SOTD',
+			val: '2023'
+		},
+		{
+			key: 'CSSDA SOTD',
+			val: '2023'
+		},
+		{
+			key: 'Awwwards Website of the Month',
+			val: '2023'
+		},
+		{
+			key: 'CSSDA SOTD',
+			val: '2022'
+		},
+		{
+			key: 'Awwwards SOTD',
+			val: '2022'
+		},
+		{
+			key: 'Awwwards Website of the Year',
+			val: '2021'
 		}
 	]
 };
