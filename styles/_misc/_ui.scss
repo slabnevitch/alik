@@ -409,9 +409,70 @@ line-height: 180%;
      }
   }
 }
-.icon-font {}
-.soc-tw {}
-.soc-inst {}
-.soc-ball {}
-.soc-be {}
+.label {
+  margin-bottom: 8px;
+  font-family: $satReg;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 1.6;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: $textMuted;
+
+
+}
+.title {
+  font-family: $satL;
+  @include adaptive-value('font-size', 48, 34, 1);
+line-height: 1.1;
+color:$textDefault;
+}
+.form__input {
+  height: 53px;
+  padding-left:24px;
+  padding-right:24px;
+  border: 1px solid $border;
+  background: $bgMuted;
+  @include placecolor($textDefault);
+  font-family:$satReg;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 160%;
+  letter-spacing: 0.12em;
+  color:$textDefault;
+
+  &::placeholder{
+    text-transform: uppercase;
+  }
+
+  &--error{
+    border-color: red;
+  }
+  &--active{
+    border: 2px solid rgb(1, 63, 125);
+  }
+  &:focus{
+    border-color: $textDefault;
+  }
+  // &:focus, &:not(:placeholder-shown){
+  //   padding-top: rem(18);
+
+  //   & ~ .form__placeholder{
+  //     top: 11px;
+  //     transform: translateY(0);
+  //     font-size: 12px;
+  //   }
+  // }
+}
+.form__area {
+  height: 200px;
+  padding-block: 16px;
+  text-transform: none;
+
+  
+
+  &:focus{
+    outline: none;
+  }
+}
 /*--------------------END ui----------------------*/ 

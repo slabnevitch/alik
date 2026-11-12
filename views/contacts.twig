@@ -1,0 +1,45 @@
+{% extends "templates/layouts/base.twig" %}
+
+{% set title = "Contacts" %}
+
+{% set pageName = "contacts" %}
+
+{% block content %}
+	<div class="contacts">
+		<div class="contacts__wrapper">
+			<figure class="contacts__picture">
+				<img src="/src/assets/img/hero/hero-img.png" alt="image№" class="ontacts__img">
+			</figure>
+
+			<div class="contacts__body">
+				<div class="contacts__form form-contacts blur-border">
+					<div class="form-contacts__header">
+						<div class="form-contacts__label label">Contact</div>
+						<h1 class="form-contacts__title title">Let’s get in touch.</h1>
+					</div>
+
+					<form action="#" method='POST' class="form-contacts__body form formhandler">
+						<div class="formhandler__notices"></div>
+						<label class="form__label">
+							<input  type="text" name="name" class="form__input formhandler__field" placeholder="name"/>
+						</label>
+						<label class="form__label">
+							<input  type="email" name="email" class="form__input formhandler__field" placeholder="email"/>
+						</label>
+						<textarea class="form__input form__area .formhandler__field" autocomplete="off" name="message" id="" placeholder="message"></textarea>
+						<button type="submit" class="btn btn--inv form__send">Send Message</button>
+					</form>
+				</div>
+				<ul class="arik__socials soc-block">
+					{% for item in site.arikSocials %}
+						<li class="soc-block__item">
+							<a href="#" target="_blank" class="blur-border soc-block__link icon-font {{ item.icon }}">{{item.title}}<i class="soc-block__arrow icon-font arrrow-r-t"></i></a>
+						</li>
+					{% endfor %}
+				</ul>
+			</div>
+
+
+		</div>
+	</div>
+{% endblock %}

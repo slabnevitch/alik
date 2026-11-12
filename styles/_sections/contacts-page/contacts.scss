@@ -1,0 +1,59 @@
+.contacts {
+	@include adaptive-value('padding-top', 224, 100, 1);
+	@include adaptive-value('padding-bottom', 160, 80, 1);
+}
+.contacts__wrapper {
+	@include min-screen($sm){
+		@include adaptive-value('column-gap', 80, 0, 1);
+		display: flex;
+		align-items: flex-start;
+	}
+}
+.contacts__picture {
+	flex: 1 1 719px;
+	padding: 0;
+	margin: 0;
+}
+.ontacts__img {
+object-fit: contain;
+  mix-blend-mode: lighten;
+}
+.contacts__body {
+	flex: 1 1 600px;
+	display: grid;
+	gap: 16px;
+}
+.formhandler__notices{
+	display: none;
+}
+.contacts__form {}
+.form-contacts {
+	@include adaptive-value('padding', 48, 16, 1);
+}
+.form-contacts__header {
+	margin-bottom: 32px;
+}
+.form-contacts__label {}
+.label {}
+.form-contacts__title {}
+.title {}
+.form-contacts__body {
+	display: grid;
+	gap: 16px;
+
+}
+.form {}
+.form__input {}
+.form__area {}
+.btn {}
+.btn-inv {}
+.form__send {}
+.arik__socials {}
+.soc-block {}
+.soc-block__item {}
+.blur-border {}
+.soc-block__link {}
+.icon-font {}
+
+.soc-block__arrow {}
+.arrrow-r-t {}

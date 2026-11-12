@@ -1,6 +1,7 @@
 .arik-page {}
 .arik {
 	@include adaptive-value('padding-top', 224, 100, 1);
+	@include adaptive-value('padding-bottom', 160, 45, 1);
 	@include adaptive-value('column-gap', 80, 0, 1);
 
 	@include min-screen($sm){
@@ -13,10 +14,7 @@
 }
 .arik__picture {
 	margin: 0;
-	@include min-screen($sm){
-		flex: 1 1 520px;
-		
-	}
+
 
 	@media only screen and (max-width :  767.98px){
 		@include adaptive-value('margin-top', 64, 40, 1);
@@ -30,9 +28,11 @@
 	max-width: 70%;
 	mix-blend-mode: lighten;
 
-	@include min-screen(px){
+	@include min-screen($sm){
 		max-width: 100%;
-		
+		flex: 1 1 520px;
+		position: sticky;
+		top: 0;
 	}
 }
 .arik__body {
@@ -126,6 +126,7 @@ color:$textDefault;
 	list-style-type: none;
 }
 .soc-block__link {
+	height: 100%;
 	padding: 18px 24px 18px 26px;
 	display: grid;
 	grid-template-columns: auto 1fr auto;
