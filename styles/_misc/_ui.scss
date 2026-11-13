@@ -465,6 +465,7 @@ color:$textDefault;
   // }
 }
 .form__area {
+  width: 100%;
   height: 200px;
   padding-block: 16px;
   text-transform: none;
@@ -474,5 +475,8 @@ color:$textDefault;
   &:focus{
     outline: none;
   }
+}
+.formhandler__notice--hidden{
+  display: none;
 }
 /*--------------------END ui----------------------*/ 
