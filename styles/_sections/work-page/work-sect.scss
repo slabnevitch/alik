@@ -1,0 +1,12 @@
+.work {
+	@include adaptive-value('padding-top', 224, 100, 1);
+	@include adaptive-value('padding-bottom', 160, 80, 1);
+}
+.work__blockhead{
+	@include adaptive-value('margin-bottom', 96, 30, 1);
+}
+.work__screens{
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(min(450px, 100%), 1fr));
+	gap: 32px;
+}

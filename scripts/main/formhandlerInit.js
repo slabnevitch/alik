@@ -1,5 +1,7 @@
 const FormHandler = require("./formhandler.js-1.1.2/dist/js/FormHandler.js");
-// import "./formhandler.js-1.1.2/dist/css/formhandler.min.css";
+require('./graph-modal/dist/graph-modal.min.js');
+console.log(GraphModal)
+import "./graph-modal/dist/graph-modal.css";
 
 export const formhanlderInit = () => {
 	if(document.querySelector('.formhandler') != null){
@@ -42,6 +44,7 @@ export const formhanlderInit = () => {
 		  	
 		  	onSubmit(form, fields) {
 		  		console.log('onSubmit', form, fields);
+		  		new GraphModal().open('formsend');
 		  	},
 		  	onSend(result) {
 		  		console.log('onsend', result);
@@ -50,4 +53,5 @@ export const formhanlderInit = () => {
 	});
 
 }
+
 }

@@ -1,0 +1,20 @@
+{% extends "templates/layouts/base.twig" %}
+
+{% set title = "Work" %}
+
+{% set pageName = "work" %}
+
+{% block content %}
+	<div class="work">
+		<div class="work__wrapper">
+			<div class="work__blockhead">
+				{{ mixins.blockhead(false, 'Work', false, 'My latest web design projects and see how we can help bring your ideas to life.') }}	
+			</div>
+			<div class="work__screens">
+				{% for key, value in site.selectedWorks %}
+					{{ mixins.selwork((key+1)~'.jpg', value) }}
+				{% endfor %}
+			</div>
+		</div>
+	</div>
+{% endblock %}
