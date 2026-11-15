@@ -43,6 +43,10 @@
 			margin: 0 auto;
 		}
 	}
+
+	.disable-scroll &{
+		padding-right: var(--scroll-width);
+	}
 }
 .header__logo {
 	flex: 0 0 51px;

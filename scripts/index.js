@@ -12,6 +12,7 @@ import {ReadMore} from './main/more-less/more-less.js';
 import PureCounter from "./main/purecounter_vanilla.js";
 const autosize = require('./main/autosize/autosize.js');
 import {formhanlderInit} from "./main/formhandlerInit.js";
+require('./main/scrollWidth.js');
 
 const Marquee3k = require('./main/marquee3k.js');
 Marquee3k.init();

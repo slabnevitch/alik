@@ -1,0 +1,19 @@
+.graph-modal{
+	  backdrop-filter: blur(15px);
+	  background-color: rgba(218, 197, 167, 0.05);
+}
+.modal{
+	@include adaptive-value('padding', 48, 16, 1);
+	 border: 1px solid $border;
+	 color: $textInv;
+	 border-radius: 2px;
+	 background-color: $textMuted;
+}
+.modal-close{
+	color: $textDefault;
+	// rotate:45deg;
+	// background-image: ;
+	&:before{
+
+	}
+}
