@@ -1,0 +1,38 @@
+{% extends "templates/layouts/base.twig" %}
+
+{% set title = "Work-Single" %}
+
+{% set pageName = "worksingle" %}
+
+{% block content %}
+	<div class="single">
+		<section class="single__hero hero-single">
+			<div class="single__wrapper">
+				<div class="single__blockhead">
+					{{ mixins.blockhead(false, 'Space', false, "Modern and visually appealing website that reflected the client's brand.") }}	
+				</div>
+				<div class="single__info info-singlework">
+					{% for value in site.selectedWorks %}
+						<div class="info-singlework__item">
+							<div class="info-singlework__title">{{}}</div>
+							<div class="info-singlework__item">{{}}</div>
+						</div>
+					{% endfor %}
+				</div>
+				<div class="hero-single__down">
+					<a href="#steps" class="btn-downtext">
+						<span class="scroll-down blur-border">
+							<i class="icon-font arrow-down"></i>
+						</span>
+						More Details
+					</a>
+				</div>
+			</div>
+		</section>
+		<div class="single__project project-single">
+			<figure class="project-single__picture">
+				<img src="/src/assets/img/selected/1.jpg" alt="ing" class="single-project__picture">
+			</figure>
+		</div>
+	</div>
+{% endblock %}

@@ -173,5 +173,23 @@ export default {
 			key: 'Awwwards Website of the Year',
 			val: '2021'
 		}
+	],
+	singleworksItems: [
+		{
+			title: 'Client',
+			sub: 'Pawel Gola'
+		},
+		{
+			title: 'Timeline',
+			sub: '3 Weeks'
+		},
+		{
+			title: 'Services',
+			sub: 'Template'
+		},
+		{
+			title: 'Website',
+			sub: 'gola.io'
+		}
 	]
 };
