@@ -12,27 +12,50 @@
 					{{ mixins.blockhead(false, 'Space', false, "Modern and visually appealing website that reflected the client's brand.") }}	
 				</div>
 				<div class="single__info info-singlework">
-					{% for value in site.selectedWorks %}
-						<div class="info-singlework__item">
-							<div class="info-singlework__title">{{}}</div>
-							<div class="info-singlework__item">{{}}</div>
+					{% for item in site.singleworksItems %}
+						<div class="info-singlework__item blur-border">
+							<div class="info-singlework__title label">{{item.title}}</div>
+							<div class="info-singlework__sub label">{{item.sub}}</div>
 						</div>
 					{% endfor %}
 				</div>
-				<div class="hero-single__down">
-					<a href="#steps" class="btn-downtext">
-						<span class="scroll-down blur-border">
-							<i class="icon-font arrow-down"></i>
-						</span>
-						More Details
-					</a>
-				</div>
+				<a href="#steps" class="btn-downtext">
+					<span class="scroll-down blur-border">
+						<i class="icon-font arrow-down"></i>
+					</span>
+					More Details
+				</a>	
 			</div>
 		</section>
 		<div class="single__project project-single">
-			<figure class="project-single__picture">
-				<img src="/src/assets/img/selected/1.jpg" alt="ing" class="single-project__picture">
-			</figure>
+			<div class="project-single__wrapper">
+				<figure class="project-single__picture">
+					<img src="/src/assets/img/selected/1.jpg" alt="ing" class="single-project__img">
+				</figure>
+			</div>
 		</div>
+
+		<section class="single__body body-single">
+			<div class="body-single__wrapper">
+				<div class="body-single__content">
+					<div class="body-single__header">
+						<div class="body-single__label label">About</div>
+						<h2 class="body-sinle__title title">Concept, Design, and Development. All-in-one.</h2>
+						
+					</div>
+				</div>
+				<div class="body-single__items">
+					{% for item in site.singleBodyItems %}
+						<article class="body-single__item item-single-body blur-border">
+							<h4 class="item-single-body__title title">{{item.title}}</h4>
+							<div class="item-single-body__text">
+								<p>{{item.text}}</p>
+							</div>
+						</article>
+						
+					{% endfor %}
+				</div>
+			</div>
+		</section>
 	</div>
 {% endblock %}

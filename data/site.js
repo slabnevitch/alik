@@ -191,5 +191,19 @@ export default {
 			title: 'Website',
 			sub: 'gola.io'
 		}
+	],
+	singleBodyItems: [
+		{
+			title: 'Challenge',
+			text: "Our client was struggling to attract and retain customers due to an outdated and non-responsive website that didn't align with their brand identity."
+		},
+		{
+			title: 'Goal',
+			text: "Our goal was to create a modern and visually appealing website that reflected the client's brand and delivered a seamless user experience. The website needed to be responsive, easy to navigate, and optimized for search engines to improve their online visibility."
+		},
+		{
+			title: 'Result',
+			text: "Our team developed a custom website design that was not only visually stunning but also user-friendly and optimized for search engines. The client's website now showcases their products and services in a professional and engaging manner, and has seen a significant increase in organic traffic and customer engagement. The client is thrilled with the final result and has received positive feedback from their customers."
+		}
 	]
 };
