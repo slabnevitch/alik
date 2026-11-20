@@ -1,0 +1,40 @@
+{% extends "templates/layouts/base.twig" %}
+
+{% set title = "Blog" %}
+
+{% set pageName = "blog" %}
+
+{% block content %}
+	<div class="blog">
+		<section class="blog__hero">
+			<div class="blog__wrapper">
+				<div class="blog__blockhead">
+					{{ mixins.blockhead(false, 'Blog', false, "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor lorem.") }}	
+				</div>	
+			</div>
+		</section>
+		<div class="blog__cards">
+			<div class="cards__wrapper">
+				<div class="cards-container">
+					{% for key, value in site.blog %}
+						<article class="blog-card blur-border">
+							<a href="#" class="blog-card__img-link">
+								<img src="/src/assets/img/blog/{{key + 1}}.jpg" alt="" class="blog-card__img">
+							</a>
+							<div class="blog-card__body">
+								<time date-time="23-08-2023" class="card__time">23rd Aug 2023</time>
+								<h4 class="blog-card__title">
+									<a href="#" class="blog-card__title-link">{{value.title}}</a>
+								</h4>
+								<div class="blog-card__text">
+									<p>{{value.text}}</p>
+								</div>
+							</div>
+							<a href="#" class="blog-card__category blur-border">webdesign</a>
+						</article>
+					{% endfor %}
+				</div>
+			</div>
+		</div>
+	</div>
+{% endblock %}

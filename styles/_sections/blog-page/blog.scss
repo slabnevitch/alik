@@ -1,0 +1,124 @@
+.blog {}
+.blog__hero {
+	@include adaptive-value('padding-top', 224, 100, 1);
+	@include adaptive-value('padding-bottom', 64, 40, 1);
+}
+.blog__wrapper {}
+.blog__blockhead {}
+.blog__cards {
+	@include adaptive-value('padding-bottom', 128, 40, 1);
+}
+.cards__wrapper {
+	max-width: 1600px;
+
+}
+.cards-container {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(min(500px, 100%), 1fr));
+	gap: 32px;
+}
+.blog-card {
+	@include adaptive-value('padding', 48, 20, 1);
+	display: grid;
+	grid-template-rows: auto 1fr auto;
+	justify-items: start;
+	gap: 32px;
+}
+.blog-card__img-link {
+	position: relative;
+	display: block;
+	aspect-ratio: 416 / 270;
+	width: 100%;
+	overflow: hidden;
+
+	&::before {
+		content: "";
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		top: 0;
+		left: 0;
+		background-image: url(/src/assets/img/selected/noice.png);
+		background-position: 0 0;
+		background-repeat: no-repeat;
+		background-size: cover;
+		z-index: 1;
+	}
+	&:after{
+		content: "";
+		position: absolute;
+		z-index: 3;
+		// @include absolute-center();
+		left: 50%;
+		top: 50%;
+		translate: -50% -50%;
+		border: 1px solid $border;
+		border-radius: 50%;
+		width: 46px;
+		aspect-ratio: 1;
+		backdrop-filter: blur(30px);
+		background: $bgMuted;
+		font: normal normal normal 24px/1 icon-font;
+  		text-rendering: auto;
+  		color: $textDefault;
+  		rotate: 45deg;
+  		scale: 0;
+  		will-change: transform;
+  		font-size: 13px;
+  		display: flex;
+  		align-items: center;
+  		justify-content: center;
+  		transition: scale .2s;
+  		transform-origin: center;
+	}
+
+
+	@media (any-hover: hover) { //только для устройств с ховером
+			&:hover{
+				&:after{
+					scale: 1;
+				}
+			}
+		}
+}
+.blog-card__img {
+	width: 100%;
+	  height: 100%;
+	  object-fit: cover;
+}
+.blog-card__body {
+	display: grid;
+	align-content: start;
+	gap: 8px;
+}
+.blog-card__time {
+	font-size: 12px;
+	line-height: 120%;
+	text-transform: uppercase;
+	color: $textMuted;
+}
+.blog-card__title {
+	margin-bottom: 0;
+}
+.blog-card__title-link {
+	font-size: 24px;
+	line-height: 130%;
+	letter-spacing: 0.04em;
+	color: $textDefault;
+
+}
+.blog-card__text {
+	p{
+		margin: 0;
+		font-size: 16px;
+		line-height: 180%;
+		color: $textMuted;
+	}
+}
+.blog-card__category {
+	padding: 8px;
+	font-size: 12px;
+	line-height: 120%;
+	text-transform: uppercase;
+	color: $textDefault;
+}

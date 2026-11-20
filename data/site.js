@@ -205,5 +205,31 @@ export default {
 			title: 'Result',
 			text: "Our team developed a custom website design that was not only visually stunning but also user-friendly and optimized for search engines. The client's website now showcases their products and services in a professional and engaging manner, and has seen a significant increase in organic traffic and customer engagement. The client is thrilled with the final result and has received positive feedback from their customers."
 		}
+	],
+	blog: [
+		{
+			title: 'How to Build a Stunning Website with Framer',
+			text: 'Learn how to create an impressive website using Framer with our step-by-step guide.'
+		},
+		{
+			title: '10 website elements for maximum user engagement',
+			text: '10 website elements to engage users, from intuitive navigation to compelling visuals.'
+		},
+		{
+			title: 'The importance of content in driving website traffic',
+			text: 'Quality content is king. Learn how to create valuable, SEO-optimized content.'
+		},
+		{
+			title: '10 common web development mistakes to avoid',
+			text: "10 common web development mistakes and improve your site's functionality and user experience."
+		},
+		{
+			title: 'Why responsive web design is critical for your business',
+			text: "Responsive web design ensures your site looks great and performs well on all devices."
+		},
+		{
+			title: 'The art of SEO writing: How to write content that ranks on Google',
+			text: "Optimize your website with expert tips on writing content that ranks high on Google."
+		}
 	]
 };
