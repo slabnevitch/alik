@@ -7,6 +7,7 @@ import '@/styles/index.scss';
 import './main/spoilers/spoilers.js';
 import './helpers/toggle-mnu';
 import './helpers/dynamic-adaptive/da.min.js';
+// import './helpers/rem.js';
 import {ReadMore} from './main/more-less/more-less.js';
 // window.bootstrap = bootstrap;
 import PureCounter from "./main/purecounter_vanilla.js";
